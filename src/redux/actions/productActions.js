@@ -18,13 +18,13 @@ export const selectedProduct = (product)=>{
 
 //middleware using redux-thunk
 export const fetchProducts = ()=> async(dispatch)=>{
-    const response = await apiCall.get('/products')
+    const response = await apiCall.get('/loadproducts')
     dispatch({type:ActionTypes.FETCH_PRODUCTS, payload:response.data})
 
 }
 
 export const fetchProduct = (pid)=> async(dispatch)=>{
-    const response = await apiCall.get(`/products/${pid}`)
+    const response = await apiCall.get(`/loadproducts/${pid}`)
     dispatch({type:ActionTypes.SELECTED_PRODUCT, payload:response.data})
 
 }
