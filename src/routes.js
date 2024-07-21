@@ -3,6 +3,6 @@ import ProductDetails from "./components/ProductDetails";
 
 export const routes=[
     {path:"/" ,element:<ProductList/>},
-    {path: "product/:pid", element:<ProductDetails/>}
+    {path: "loadproducts/:pid", element:<ProductDetails/>}
     
 ]
